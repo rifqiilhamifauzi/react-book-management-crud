@@ -37,12 +37,12 @@
   }
 }
 
-/* src/App.css */
+
 
 /* --- Tata Letak Dasar (Container) --- */
 .container {
-    max-width: 900px; /* Batasi lebar agar tidak terlalu lebar di layar besar */
-    margin: 40px auto; /* Memberi margin atas/bawah dan menengahkan di layar */
+    max-width: 900px; 
+    margin: 40px auto; 
     padding: 20px;
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
@@ -70,28 +70,28 @@ hr {
     margin: 30px 0;
 }
 
-/* --- Gaya Formulir (Form Styling) --- */
+
 form div {
-    display: flex; /* Gunakan flexbox untuk mensejajarkan label dan input */
+    display: flex; 
     align-items: center;
     margin-bottom: 15px;
 }
 
 form label {
-    width: 100px; /* Lebar tetap untuk label */
+    width: 100px;
     font-weight: bold;
     color: #444;
 }
 
 form input[type="text"] {
-    flex-grow: 1; /* Input mengambil sisa ruang */
+    flex-grow: 1; 
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
 }
 
-/* --- Gaya Tombol (Button Styling) --- */
+
 button {
     padding: 10px 15px;
     border: none;
@@ -99,36 +99,36 @@ button {
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s ease;
-    margin-right: 8px; /* Jarak antar tombol */
+    margin-right: 8px; 
 }
 
-/* Tombol Primary/Tambah */
+
 button[type="submit"] {
     background-color: #007bff;
     color: white;
-    margin-left: 100px; /* Sejajarkan dengan input field */
+    margin-left: 100px; 
 }
 
 button[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-/* Tombol Edit */
+
 .book-actions button:nth-child(1) {
     background-color: #ffc107;
     color: #333;
 }
 
-/* Tombol Hapus */
+
 .book-actions button:nth-child(2) {
     background-color: #dc3545;
     color: white;
 }
 
-/* --- Gaya Tabel (Table Styling) --- */
+
 table {
     width: 100%;
-    border-collapse: collapse; /* Hapus batas ganda */
+    border-collapse: collapse;
     margin-top: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
@@ -145,12 +145,12 @@ table th {
     font-weight: bold;
 }
 
-/* Gaya hover pada baris tabel */
+
 table tbody tr:hover {
     background-color: #f1f1f1;
 }
 
-/* Gaya untuk pesan jika daftar kosong */
+
 p {
     color: #777;
     font-style: italic;

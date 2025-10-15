@@ -1,4 +1,4 @@
-// src/components/BookList.js
+
 import React from 'react';
 
 function BookList({ books, onDelete, onEdit }) {

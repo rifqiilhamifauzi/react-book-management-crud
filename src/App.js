@@ -1,5 +1,5 @@
 import './App.css'; 
-// src/App.js
+
 import React, { useState, useEffect } from 'react';
 import BookList from './components/BookList';
 import BookForm from './components/BookForm';
@@ -8,9 +8,9 @@ const LOCAL_STORAGE_KEY = 'react-books-app.books';
 
 function App() {
   const [books, setBooks] = useState([]);
-  const [editingBook, setEditingBook] = useState(null); // State untuk buku yang sedang di-edit
+  const [editingBook, setEditingBook] = useState(null); 
 
-  // 1. READ: Memuat data dari Local Storage saat aplikasi pertama kali dimuat
+  
   useEffect(() => {
     const storedBooks = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
     if (storedBooks) {
@@ -18,7 +18,7 @@ function App() {
     }
   }, []);
 
-  // Menyimpan data ke Local Storage setiap kali state 'books' berubah
+  
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(books));
   }, [books]);
@@ -26,18 +26,18 @@ function App() {
   // Fungsi Tambah/Ubah (Create & Update)
   const addBook = (newBook) => {
     if (editingBook) {
-      // Logika Update (jika ada buku yang sedang di-edit)
+     
       setBooks(
         books.map((book) =>
           book.id === editingBook.id ? { ...book, ...newBook } : book
         )
       );
-      setEditingBook(null); // Reset mode edit
+      setEditingBook(null); 
     } else {
-      // Logika Create (Tambah)
+      
       const bookWithId = {
         ...newBook,
-        id: Date.now(), // ID sederhana menggunakan timestamp
+        id: Date.now(), 
       };
       setBooks([...books, bookWithId]);
     }
@@ -45,7 +45,7 @@ function App() {
 
   // Fungsi Hapus (Delete)
   const deleteBook = (id) => {
-    // Menghapus buku berdasarkan ID
+    
     setBooks(books.filter((book) => book.id !== id));
   };
 

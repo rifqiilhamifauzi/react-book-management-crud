@@ -1,17 +1,17 @@
-// src/components/BookForm.js
+
 import React, { useState, useEffect } from 'react';
 
 function BookForm({ addBook, editingBook }) {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
 
-  // Mengisi form jika dalam mode edit
+ 
   useEffect(() => {
     if (editingBook) {
       setTitle(editingBook.title);
       setAuthor(editingBook.author);
     } else {
-      // Reset form jika keluar dari mode edit
+      
       setTitle('');
       setAuthor('');
     }
@@ -24,10 +24,10 @@ function BookForm({ addBook, editingBook }) {
       return;
     }
     
-    // Panggil fungsi addBook dari App.js
+    
     addBook({ title, author });
     
-    // Kosongkan form setelah submit
+    
     setTitle('');
     setAuthor('');
   };
