@@ -36,3 +36,123 @@
     transform: rotate(360deg);
   }
 }
+
+/* src/App.css */
+
+/* --- Tata Letak Dasar (Container) --- */
+.container {
+    max-width: 900px; /* Batasi lebar agar tidak terlalu lebar di layar besar */
+    margin: 40px auto; /* Memberi margin atas/bawah dan menengahkan di layar */
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #555;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+    margin: 30px 0;
+}
+
+/* --- Gaya Formulir (Form Styling) --- */
+form div {
+    display: flex; /* Gunakan flexbox untuk mensejajarkan label dan input */
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+form label {
+    width: 100px; /* Lebar tetap untuk label */
+    font-weight: bold;
+    color: #444;
+}
+
+form input[type="text"] {
+    flex-grow: 1; /* Input mengambil sisa ruang */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* --- Gaya Tombol (Button Styling) --- */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-right: 8px; /* Jarak antar tombol */
+}
+
+/* Tombol Primary/Tambah */
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    margin-left: 100px; /* Sejajarkan dengan input field */
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Tombol Edit */
+.book-actions button:nth-child(1) {
+    background-color: #ffc107;
+    color: #333;
+}
+
+/* Tombol Hapus */
+.book-actions button:nth-child(2) {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* --- Gaya Tabel (Table Styling) --- */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Hapus batas ganda */
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #eee;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Gaya hover pada baris tabel */
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Gaya untuk pesan jika daftar kosong */
+p {
+    color: #777;
+    font-style: italic;
+    margin-top: 20px;
+}
